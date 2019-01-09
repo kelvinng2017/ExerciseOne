@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/email_login"
+            android:icon="@drawable/login"
+            android:title="@string/Login"
+            />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/email_register"
+            android:icon="@drawable/account_plus"
+            android:title="@string/register" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/setting_account"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/user" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Logout"
+            android:icon="@drawable/logout"
+            android:title="@string/Logout"
+            />
+    </group>
+</menu>
