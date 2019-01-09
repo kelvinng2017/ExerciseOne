@@ -1,12 +1,15 @@
 package com.example.kelvinng.exerciseone;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,9 +19,15 @@ import android.widget.Toast;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public  ActionBarDrawerToggle actionBarDrawerToggle;
+    public  DrawerLayout drawerLayout_activity_main;
+    public MenuItem email_login;
+    public Menu activity_main_menu;
+    public NavigationView navigation_view_activity_main;
+    public View activity_main_view;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        DrawerLayout drawerLayout_activity_main=findViewById(R.id.drawerLayout_activity_main);
+       drawerLayout_activity_main=findViewById(R.id.drawerLayout_activity_main);
         actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout_activity_main,R.string.open,R.string.close);//必須用字串資源檔
         drawerLayout_activity_main.addDrawerListener(actionBarDrawerToggle);//監聽選單按鈕是否被觸擊
         actionBarDrawerToggle.syncState();//隱藏顯示箭頭返回
-        NavigationView navigation_view_activity_main=findViewById(R.id.navigation_view_activity_main);
-        View activity_main_view=navigation_view_activity_main.getHeaderView(0);
+        navigation_view_activity_main=findViewById(R.id.navigation_view_activity_main);
+        activity_main_view=navigation_view_activity_main.getHeaderView(0);
         TextView activity_main_user_name=activity_main_view.findViewById(R.id.activity_name_user_name);
         CircleImageView activity_name_user_image=activity_main_view.findViewById(R.id.activity_name_user_image);
         activity_name_user_image.setOnClickListener(new View.OnClickListener() {
@@ -72,8 +81,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"你點擊了大頭貼",Toast.LENGTH_LONG).show();
             }
         });
-        Menu activity_main_menu=navigation_view_activity_main.getMenu();
-        MenuItem email_login=activity_main_menu.findItem(R.id.email_login);
+        activity_main_menu=navigation_view_activity_main.getMenu();
+        email_login=activity_main_menu.findItem(R.id.email_login);
+        navigation_view_activity_main.setNavigationItemSelectedListener(this);//清單觸發監聽事件
 
     }
 
@@ -84,5 +94,45 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        /*if (id == R.id.email_login) {
+            Toast.makeText(MainActivity.this,"你點擊了登錄按鈕",Toast.LENGTH_SHORT).show();
+        }
+        if(id==R.id.email_register){
+            Toast.makeText(MainActivity.this,"你點擊了註冊按鈕",Toast.LENGTH_SHORT).show();
+        }
+        if(id==R.id.setting_account){
+            Toast.makeText(MainActivity.this,"你點擊了會員資料設定按鈕",Toast.LENGTH_SHORT).show();
+        }
+        if(id==R.id.Logout){
+            Toast.makeText(MainActivity.this,"你點擊了登出按鈕",Toast.LENGTH_SHORT).show();
+        }*/
+
+        switch (id){
+            case R.id.email_login:
+                Toast.makeText(MainActivity.this,"你點擊了登錄按鈕",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.email_register:
+                Toast.makeText(MainActivity.this,"你點擊了註冊按鈕",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.setting_account:
+                Toast.makeText(MainActivity.this,"你點擊了會員資料設定按鈕",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.Logout:
+                Toast.makeText(MainActivity.this,"你點擊了登出按鈕",Toast.LENGTH_SHORT).show();
+                break;
+                default:
+        }
+
+        drawerLayout_activity_main.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

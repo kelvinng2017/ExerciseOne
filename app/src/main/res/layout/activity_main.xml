@@ -5,6 +5,7 @@
     android:id="@+id/drawerLayout_activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -116,8 +117,7 @@
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/menu_navigation"
         android:layout_gravity="start"
-        app:itemTextColor="@color/black"
-        >
+        app:itemTextColor="@color/black">
 
     </android.support.design.widget.NavigationView>
 
