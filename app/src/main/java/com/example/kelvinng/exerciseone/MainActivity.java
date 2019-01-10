@@ -122,6 +122,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.email_register:
                 Toast.makeText(MainActivity.this,"你點擊了註冊按鈕",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this,email_register.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(i);
                 break;
             case R.id.setting_account:
                 Toast.makeText(MainActivity.this,"你點擊了會員資料設定按鈕",Toast.LENGTH_SHORT).show();
