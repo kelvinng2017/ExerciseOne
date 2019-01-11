@@ -25,7 +25,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.9"
+                android:layout_weight="2"
                 android:orientation="vertical"
                 android:gravity="center">
 
@@ -48,8 +48,7 @@
                     android:id="@+id/user_email_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="輸入電郵"
-                    android:singleLine="true" />
+                    android:hint="@string/input_email"/>
 
             </LinearLayout>
 
@@ -63,7 +62,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.9"
+                android:layout_weight="2"
                 android:orientation="vertical"
                 android:gravity="center">
 
@@ -86,8 +85,7 @@
                     android:id="@+id/user_password_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="輸入密碼"
-                    android:singleLine="true" />
+                    android:hint="@string/input_password"/>
 
             </LinearLayout>
 
@@ -101,7 +99,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.9"
+                android:layout_weight="2"
                 android:orientation="vertical"
                 android:gravity="center">
 
@@ -124,8 +122,7 @@
                     android:id="@+id/user_confirm_password_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="確認密碼"
-                    android:singleLine="true" />
+                    android:hint="確認密碼"/>
 
             </LinearLayout>
 

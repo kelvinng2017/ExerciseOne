@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".email_register"></activity>
+        <activity android:name=".email_register" />
+        <activity android:name=".Email_Login"></activity>
     </application>
 
 </manifest>

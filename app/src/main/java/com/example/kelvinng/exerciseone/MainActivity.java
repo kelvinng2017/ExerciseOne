@@ -119,13 +119,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id){
             case R.id.email_login:
                 Toast.makeText(MainActivity.this,"你點擊了登錄按鈕",Toast.LENGTH_SHORT).show();
+                Intent go_to_email_login = new Intent(MainActivity.this,Email_Login.class);
+                go_to_email_login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                go_to_email_login.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(go_to_email_login);
                 break;
             case R.id.email_register:
                 Toast.makeText(MainActivity.this,"你點擊了註冊按鈕",Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(MainActivity.this,email_register.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(i);
+                Intent go_to_email_register = new Intent(MainActivity.this,email_register.class);
+                go_to_email_register.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                go_to_email_register.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(go_to_email_register);
                 break;
             case R.id.setting_account:
                 Toast.makeText(MainActivity.this,"你點擊了會員資料設定按鈕",Toast.LENGTH_SHORT).show();
