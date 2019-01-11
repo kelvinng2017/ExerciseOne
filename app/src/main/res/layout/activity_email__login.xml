@@ -64,12 +64,25 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
+                <TextView
+                    android:id="@+id/password_login_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密碼:"
+                    android:textSize="25sp"/>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
+
+                <EditText
+                    android:id="@+id/password_login_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_password"/>
 
             </LinearLayout>
 
@@ -78,7 +91,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/confirm_button_of_activity_email_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登錄"/>
 
         </LinearLayout>
 
