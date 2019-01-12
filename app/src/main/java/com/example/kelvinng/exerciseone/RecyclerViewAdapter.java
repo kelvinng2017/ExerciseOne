@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -47,7 +48,8 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         holder.recycler_view_adapter_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Log.i("點擊了",""+mName.get(position));
+
+                Toast.makeText(mContext,"點擊"+mName.get(position),Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -117,7 +117,7 @@
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/menu_navigation"
         android:layout_gravity="start"
-        app:itemTextColor="@color/black">
+        app:itemTextColor="@color/white">
 
     </android.support.design.widget.NavigationView>
 

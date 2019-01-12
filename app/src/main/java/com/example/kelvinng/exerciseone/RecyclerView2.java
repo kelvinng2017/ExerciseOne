@@ -57,6 +57,9 @@ public class RecyclerView2 extends Fragment {
         RvImage.add(R.drawable.javascript);
         RvName.add("JavaScript");
 
+        RvImage.add(R.drawable.php);
+        RvName.add("php");
+
 
 
         RecyclerView recyclerView = mMainView.findViewById(R.id.recyclerViewLayout);
