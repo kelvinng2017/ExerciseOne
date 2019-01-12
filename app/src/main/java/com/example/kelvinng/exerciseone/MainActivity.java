@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public  ActionBarDrawerToggle actionBarDrawerToggle;
     public  DrawerLayout drawerLayout_activity_main;
-    public MenuItem email_login;
+
     public Menu activity_main_menu;
     public NavigationView navigation_view_activity_main;
     public View activity_main_view;
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
         activity_main_menu=navigation_view_activity_main.getMenu();
-        email_login=activity_main_menu.findItem(R.id.email_login);
+
         navigation_view_activity_main.setNavigationItemSelectedListener(this);//清單觸發監聽事件
 
     }
@@ -130,6 +130,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 go_to_email_register.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 go_to_email_register.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(go_to_email_register);
+                break;
+            case R.id.go_to_tabLayout:
+                Intent go_to_email_tabLayout = new Intent(MainActivity.this,AppBarAndTabLayout.class);
+                go_to_email_tabLayout.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                go_to_email_tabLayout.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(go_to_email_tabLayout);
                 break;
             case R.id.setting_account:
                 Toast.makeText(MainActivity.this,"你點擊了會員資料設定按鈕",Toast.LENGTH_SHORT).show();

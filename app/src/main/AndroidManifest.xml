@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".email_register" />
-        <activity android:name=".Email_Login"></activity>
+        <activity android:name=".Email_Login" />
+        <activity android:name=".AppBarAndTabLayout"></activity>
     </application>
 
 </manifest>
